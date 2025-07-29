@@ -1,0 +1,88 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+.container, .content {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 800px;
+}
+
+
+.navbar{
+    background-color: brown;
+    height: 80px;
+}
+
+.navbar-brand img{
+    width: 100px;
+    height: 60px;
+    margin: 20px;
+    
+}
+
+
+.carousel-item img{
+    height: 90vh;
+    width: 100%;
+    margin: 0px;
+}
+
+.about .row .col img{
+    padding: 0px;
+    width: 100%;
+    max-width: 450px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 30px;
+    margin-right: 30px;
+    height: 250px;
+
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    height: 100v;       
+    padding: 0;
+    margin: 0;
+}
+
+
+.footer-section{
+    background-color: brown;
+    padding: 20 px 10 px;
+}
+
+.list-unstyled li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-icon i{
+    color: white;
+}
+
+
+  .card img {
+    height: 400px; 
+    object-fit: cover; 
+  }
+
+  .card {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px;
+  }
+
+  .center{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width:100px;
+    height:100px;
+  }

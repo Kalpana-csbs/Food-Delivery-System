@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login & Signup | Food 2025</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Bootstrap CSS + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      background-color:black;
+    }
+    .auth-container {
+      max-width: 400px;
+      margin: auto;
+      padding: 30px;
+      background:lightgrey;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 60px;
+    }
+    .form-toggle {
+      cursor: pointer;
+      color: #0b0f14;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+    <img src="fff.png" alt="logo" height="100" weight="100" class="center">
+    <h5 style="color:lightgrey;text-align:center;text-decoration:solid;">Fast - Fresh - Fantastic</h5>
+
+<div class="auth-container">
+  <h3 class="text-center mb-4" id="form-title">Login</h3>
+  <!-- Login Form -->
+  <form id="login-form">
+    <div class="mb-3">
+      <label for="login-email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="login-email" required>
+    </div>
+    <div class="mb-3">
+      <label for="login-password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="login-password" required>
+    </div>
+    <button type="submit" class="btn btn-primary w-100">Login</button>
+    <p class="mt-3 text-center">Don't have an account? <span class="form-toggle" onclick="showSignup()">Sign up</span></p>
+  </form>
+
+  <!-- Signup Form -->
+  <form id="signup-form" style="display: none;">
+    <div class="mb-3">
+      <label for="signup-name" class="form-label">Full Name</label>
+      <input type="text" class="form-control" id="signup-name" required>
+    </div>
+    <div class="mb-3">
+      <label for="signup-email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="signup-email" required>
+    </div>
+    <div class="mb-3">
+      <label for="signup-password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="signup-password" required>
+    </div>
+    <button type="submit" class="btn btn-success w-100">Sign Up</button>
+    <p class="mt-3 text-center">Already have an account? <span class="form-toggle" onclick="showLogin()">Login</span></p>
+  </form>
+</div>
+
+<!-- Bootstrap JS + Simple Toggle Script -->
+
+<script>
+  function showSignup() {
+    document.getElementById("login-form").style.display = "none";
+    document.getElementById("signup-form").style.display = "block";
+    document.getElementById("form-title").textContent = "Sign Up";
+  }
+
+  function showLogin() {
+    document.getElementById("signup-form").style.display = "none";
+    document.getElementById("login-form").style.display = "block";
+    document.getElementById("form-title").textContent = "Login";
+  }
+
+  // Redirect to index.html on successful login
+  document.getElementById("login-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    // Optional: You can check login values here before redirecting
+    window.location.href = "index.html";
+  });
+
+  // Redirect to index.html on successful signup
+  document.getElementById("signup-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    // Optional: You can save values or validate here
+    window.location.href = "index.html";
+  });
+</script>
+
+
+</body>
+</html>
+
